@@ -2,12 +2,8 @@ package com.peter;
 
 //import java.io.IOException;
 import java.util.Scanner;
-//import org.apache.logging.log4j;
-//import org.apache.logging.log4j.Logger;
-//import org.apache.logging.log4j.LogManager;
-import org.apache.log4j.BasicConfigurator;  
-import org.apache.log4j.LogManager;  
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 
   
@@ -15,7 +11,7 @@ public class Driver {
 	 
 	
 	
-	private static final Logger log = LogManager.getLogger("Bank");
+	static Logger log = LogManager.getLogger("Bank");
 //	private static final Logger LOGGER = Logger.getLogger(MyClass.class.getName());
 //	 Handler handlerObj = new ConsoleHandler();
 //	 handlerObj.setLevel(Level.ALL);
@@ -24,7 +20,7 @@ public class Driver {
 //	 log.setUseParentHandlers(false);
 
 	public static void main(String[] args) {
-		BasicConfigurator.configure(); 
+		
 		log.info("Welcome to Bank of America");
 
 		Scanner sc = new Scanner(System.in);
